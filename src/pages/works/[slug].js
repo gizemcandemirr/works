@@ -21,7 +21,6 @@ const ProjectDetail = () => {
         };
         loadData();
     }, [slug]);
-console.log(work)
     return (
         <Layout title={slug}>
             {work.map(project => (

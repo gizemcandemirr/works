@@ -12,7 +12,7 @@ const Layout = ({ children, title, description, keywords }) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <Header />
-            <main className='min-h-screen p-24'>
+            <main className='min-h-screen '>
                 {children}
             </main>
         </div>

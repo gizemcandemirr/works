@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+// Categories.js
+import React from 'react';
 import Button from '../ui/button';
 
-const Categories = () => {
-    const [activeCategory, setActiveCategory] = useState('All');
+const Categories = ({ activeCategory, setActiveCategory }) => {
     const categories = ['All', 'Marketing & Strategy', 'UX & Development', 'Performance Marketing'];
 
     return (
-        <div className=' flex mt-32'>
+        <div className='flex mt-32'>
             {categories.map(category => (
                 <Button 
                     key={category} 
@@ -17,6 +17,6 @@ const Categories = () => {
             ))}
         </div>
     );
-}
+};
 
 export default Categories;

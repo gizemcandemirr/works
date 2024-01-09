@@ -1,13 +1,23 @@
-import axiosInstance from './services/config';
+import axiosInstance from './config';
 
-const postRequest = async (url, data) => {
+const fetchWorkList = async () => {
     try {
-        const response = await axiosInstance.post(url, data);
+        const response = await axiosInstance.get('works');
         return response.data;
     } catch (error) {
-        console.error('Error making a post request:', error);
+        console.error('Error fetching work list:', error);
         throw error;
     }
 };
 
-export default postRequest;
+const fetchProjectDetails = async (projectSlug) => {
+    try {
+        const response = await axiosInstance.get(projectSlug);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching project details:', error);
+        throw error;
+    }
+};
+
+export { fetchWorkList, fetchProjectDetails };

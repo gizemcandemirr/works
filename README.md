@@ -1,4 +1,4 @@
-## If you want to review [http://localhost:3000](https://works-olive.vercel.app/)
+## If you want to review [here](https://works-olive.vercel.app/)
 
 ## Getting Started
 

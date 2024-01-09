@@ -39,7 +39,7 @@ const WorksList = ({ activeCategory }) => {
     });
 
     return (
-        <div className="flex flex-col mt-12 space-y-12 h-full">
+        <div className="flex flex-col mt-12 space-y-12 h-full  ">
             {filteredWorkList.map(project => (
                 <ProjectCard
                     key={project.link}

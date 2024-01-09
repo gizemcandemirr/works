@@ -6,7 +6,7 @@ const Categories = ({ activeCategory, setActiveCategory }) => {
     const categories = ['All', 'Marketing & Strategy', 'UX & Development', 'Performance Marketing'];
 
     return (
-        <div className='flex mt-32'>
+        <div className='flex overflow-y-auto md:overflow-y-hidden md:flex-row md:mt-32'>
             {categories.map(category => (
                 <Button 
                     key={category} 

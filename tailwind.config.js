@@ -7,12 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        "kroppa": "#0e1a56"
       },
-    },
+      cursor: {
+        'fancy': 'url(/img/eye.cur),pointer',
+      }
+    }
   },
   plugins: [],
 }

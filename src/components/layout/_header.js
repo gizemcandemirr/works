@@ -31,14 +31,14 @@ const Header = () => {
     ]
 
     return (
-        <header class="bg-white fixed top-0 left-0 w-screen z-[999] transition-colors duration-500 ease-in-out text-md">
+        <header class={`fixed top-0 left-0 w-screen z-[999] transition-colors duration-500 ease-in-out text-md ${isMobileMenuOpen ? 'bg-kroppa' : 'bg-white'}`}>
             <div className='h-100 flex items-center justify-between px-6 md:px-20 py-5' >
                 <div className=''>
                     <Image src='/img/logo.svg' alt='Logo Kroppa' width={200} height={200} />
                 </div>
 
                 <div className='md:hidden'>
-                    <Bars4Icon className='h-6 w-6' onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
+                    <Bars4Icon className={`h-6 w-6 ${isMobileMenuOpen && 'text-white'}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
                 </div>
 
                 <div className='hidden md:flex md:space-x-16'>
@@ -52,16 +52,16 @@ const Header = () => {
                 </div>
             </div>
 
-              {/* Mobile Menu */}
-              {isMobileMenuOpen && (
-                    <div className='flex flex-col items-start px-6 md:hidden'>
-                        {menu.map((item, index) => (
-                            <a key={index} href={item.link} className={`my-2 ${router.pathname === item.link ? 'font-bold' : ''}`}>
-                                {item.name}
-                            </a>
-                        ))}
-                    </div>
-                )}
+            {/* Mobile Menu */}
+            {isMobileMenuOpen && (
+                <div className='flex flex-col items-start px-6 md:hidden min-h-screen bg-kroppa text-white'>
+                    {menu.map((item, index) => (
+                        <a key={index} href={item.link} className={`my-2 ${router.pathname === item.link ? 'font-bold' : ''}`}>
+                            {item.name}
+                        </a>
+                    ))}
+                </div>
+            )}
         </header>
     )
 }

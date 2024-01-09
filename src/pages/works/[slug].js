@@ -21,8 +21,9 @@ const ProjectDetail = () => {
         };
         loadData();
     }, [slug]);
+
     return (
-        <Layout title={slug}>
+        <Layout title={work[0]?.title} description={work[0]?.title} keywords='mindpower'>
             {work.map(project => (
                <Banner title={project.title} image={project.banner}/>
             ))}

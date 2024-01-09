@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import { Bars4Icon } from '@heroicons/react/24/solid';
+import Link from 'next/link';
 
 const Header = () => {
     const router = useRouter();
@@ -33,9 +34,9 @@ const Header = () => {
     return (
         <header class={`fixed top-0 left-0 w-screen z-[999] transition-colors duration-500 ease-in-out text-md ${isMobileMenuOpen ? 'bg-kroppa' : 'bg-white'}`}>
             <div className='h-100 flex items-center justify-between px-6 md:px-20 py-5' >
-                <div className=''>
+                <Link href='/'>
                     <Image src='/img/logo.svg' alt='Logo Kroppa' width={200} height={200} />
-                </div>
+                </Link>
 
                 <div className='md:hidden'>
                     <Bars4Icon className={`h-6 w-6 ${isMobileMenuOpen && 'text-white'}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />

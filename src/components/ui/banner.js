@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Banner = ({ image,title }) => {
+const Banner = ({ key, image, title }) => {
     return (
         <div
+            key={key}
             className="relative cursor-pointer h-[300px] md:h-[600px] rounded-xl bg-gray-600 bg-opacity-75 w-full"
             style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover' }}
         >

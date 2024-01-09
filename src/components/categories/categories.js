@@ -7,9 +7,9 @@ const Categories = ({ activeCategory, setActiveCategory }) => {
 
     return (
         <div className='flex overflow-y-auto md:overflow-y-hidden md:flex-row md:mt-32'>
-            {categories.map(category => (
+            {categories.map((category,i) => (
                 <Button 
-                    key={category} 
+                    key={i} 
                     title={category} 
                     active={category === activeCategory}
                     onClick={() => setActiveCategory(category)}

@@ -40,9 +40,9 @@ const WorksList = ({ activeCategory }) => {
 
     return (
         <div className="flex flex-col mt-12 space-y-12 h-full  ">
-            {filteredWorkList.map(project => (
+            {filteredWorkList.map((project,i) => (
                 <ProjectCard
-                    key={project.link}
+                    key={i}
                     client={project.client}
                     country={project.country}
                     image={project.image}

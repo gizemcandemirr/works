@@ -1,4 +1,3 @@
-// pages/works/[slug].js
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Layout from '@/components/layout';
@@ -24,8 +23,8 @@ const ProjectDetail = () => {
 
     return (
         <Layout title={work[0]?.title} description={work[0]?.title} keywords='mindpower'>
-            {work.map(project => (
-               <Banner title={project.title} image={project.banner}/>
+            {work.map((project,i) => (
+               <Banner key={i} title={project.title} image={project.banner}/>
             ))}
         
         </Layout>
